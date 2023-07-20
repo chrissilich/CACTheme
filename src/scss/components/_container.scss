@@ -1,0 +1,8 @@
+.container {
+	// remove outer padding around page
+	padding-left: 0;
+	padding-right: 0;
+
+	// global max width for xxl windows
+	max-width: min(1400px, 80%);
+}

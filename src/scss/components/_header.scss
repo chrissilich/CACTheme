@@ -1,0 +1,49 @@
+@use "sass:math";
+header.site-header {
+	position: relative;
+
+	margin-bottom: -1em;
+	@include media-breakpoint-up(md) {
+		margin-bottom: none;
+	}
+
+	.col {
+		padding-left: rem-calc(4.25);
+		padding-right: rem-calc(4.25);
+	}
+
+	// Page specific variations
+	body.home & {
+		margin-bottom: 0;
+		z-index: 100;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.logo-column {
+			@include media-breakpoint-up(md) {
+				height: 2rem;
+				padding-bottom: 8%;
+			}
+			transition: 0.3s background-color;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	&.chris-version {
+		padding-bottom: 50px;
+		margin-bottom: -50px;
+		background-image: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0.5) 50%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		.logo-column {
+			background-color: unset !important;
+		}
+	}
+}

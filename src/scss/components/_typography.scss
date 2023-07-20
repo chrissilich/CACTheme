@@ -1,0 +1,93 @@
+// most type is handled by bootstrap
+
+body {
+	color: $cac-gray-dark;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: 0.05em;
+	text-rendering: geometricPrecision;
+}
+
+h2 {
+	// the heading for the whole page, sits just under the title
+	@include font-zah();
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	// margin-top: -1em;
+	margin-bottom: 1em;
+	font-size: rem-calc(20);
+	position: relative;
+	z-index: 1001; // bring it in front of the header
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(22);
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: rem-calc(24);
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: rem-calc(26);
+	}
+	@include media-breakpoint-up(xxl) {
+		font-size: rem-calc(28);
+	}
+	a {
+		color: $cac-gray-dark;
+		&:hover {
+			color: $cac-red;
+		}
+	}
+}
+
+h3 {
+	// bigger headings for items on the page, e.g. the book titles
+	@include font-zah();
+	letter-spacing: 0.1em;
+	color: $cac-red;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: rem-calc(43);
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(43);
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: rem-calc(43);
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: rem-calc(43);
+	}
+	@include media-breakpoint-up(xxl) {
+		font-size: rem-calc(43);
+	}
+}
+
+p {
+	font-size: rem-calc(16);
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(16);
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: rem-calc(16);
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: rem-calc(18);
+	}
+	@include media-breakpoint-up(xxl) {
+		font-size: rem-calc(20);
+	}
+}
+
+.pipe {
+	font-size: 1.1em;
+	font-weight: lighter;
+	position: relative;
+	top: 0.05em;
+}

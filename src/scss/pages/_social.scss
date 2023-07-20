@@ -1,0 +1,58 @@
+@use "sass:math";
+
+body.page-social {
+	.intro {
+		font-size: rem-calc(24);
+
+		.profile-image {
+			display: block;
+			width: 100%;
+			max-width: 120px;
+			border-radius: 50%;
+			margin: 0 auto;
+		}
+
+		a.social-link {
+			display: inline-flex;
+			flex-direction: row;
+			// align-items: center;
+			color: $cac-gray-dark;
+			height: rem-calc(35);
+
+			&:hover {
+				color: $cac-red;
+				img {
+					filter: $cac-tint-black-to-red;
+				}
+			}
+			.social-link-icon {
+				width: 26px;
+				height: 26px;
+				object-fit: contain;
+				object-position: center;
+				margin: 0 6px;
+				position: relative;
+				top: 4px;
+			}
+			.social-link-name {
+			}
+		}
+	}
+	// manually created feed
+	.image-grid {
+		img {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+		}
+	}
+	// using the instagram plugin
+	.image-grid-plugin {
+		.FeedGridLayout__grid {
+			gap: 1rem !important;
+		}
+	}
+
+	.social-page-content {
+		font-size: 1.1em;
+	}
+}

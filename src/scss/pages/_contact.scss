@@ -1,0 +1,56 @@
+body.page-contact {
+	.contact-content {
+		h3 {
+			@include font-zah();
+			color: $cac-red;
+			font-size: rem-calc(25);
+			text-align: left;
+			text-transform: none;
+			em {
+				@include font-didot();
+				font-style: italic;
+				font-size: rem-calc(19);
+				letter-spacing: 0;
+			}
+			margin-bottom: rem-calc(5);
+		}
+		h4 {
+			@include font-didot();
+			font-style: italic;
+			color: $cac-red;
+			font-size: rem-calc(19);
+			text-align: left;
+			letter-spacing: 0;
+			margin-bottom: rem-calc(5);
+		}
+		h5 {
+			@include font-zah();
+			color: $cac-red;
+			font-size: rem-calc(19);
+			text-align: left;
+			margin-bottom: rem-calc(5);
+		}
+		p {
+			font-size: rem-calc(17);
+			// margin-left: 0.75em;
+			a {
+				color: inherit;
+				&:hover {
+					color: $cac-red;
+				}
+			}
+		}
+
+		form {
+			max-width: 450px;
+		}
+	}
+
+	footer {
+		p {
+			&.lineweaver-credit {
+				display: block;
+			}
+		}
+	}
+}

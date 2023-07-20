@@ -1,0 +1,27 @@
+button.LoadMoreButton {
+	// copied from button.scss
+	// has to be duplicated because this plugin puts their styles in the style attribute...
+	// so we have to !important a bunch of stuff to override it
+	color: $cac-red !important;
+	border: 2px solid $cac-red !important;
+	background-color: white !important;
+	@include font-body();
+	font-size: rem-calc(15) !important;
+	padding: rem-calc(6) rem-calc(13) rem-calc(4) rem-calc(12) !important;
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(17) !important;
+		padding: rem-calc(8) rem-calc(15) rem-calc(6) rem-calc(13) !important;
+	}
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: 0.3s;
+	&:hover {
+		color: white !important;
+		border: 2px solid $cac-red !important;
+		background-color: $cac-red !important;
+	}
+
+	// not from button.scss
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
+}

@@ -1,0 +1,68 @@
+// This file is used to override Bootstrap variables
+// It's referenced in src/scss/setup/_bootstrap.scss
+
+@import 'breakpoints';
+
+$prefix: 'cac-';
+
+// Options
+$enable-caret: true;
+$enable-rounded: false;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: true;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+
+$spacer: 1rem;
+
+// Fonts
+$font-family-serif: $font-zah;
+$font-family-sans-serif: $font-body;
+$font-family-base: $font-family-sans-serif;
+
+$link-decoration: none;
+
+$body-color: $cac-gray-dark;
+$link-color: $cac-red;
+
+$primary: $cac-red;
+$secondary: darken($cac-red, 20%);
+
+// TYPE
+
+$font-size-root: 20px;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.8;
+$h4-font-size: $font-size-base * 1.7;
+$h5-font-size: $font-size-base * 1.1;
+$h6-font-size: $font-size-base;
+
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.5,
+	2: $spacer * 1,
+	3: $spacer * 1.5,
+	4: $spacer * 2,
+	5: $spacer * 2.5,
+	6: $spacer * 3,
+	7: $spacer * 3.5,
+	8: $spacer * 4,
+	9: $spacer * 4.5,
+	10: $spacer * 5,
+);
+
+$line-height-base: 1.5;

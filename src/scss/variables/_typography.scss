@@ -1,0 +1,117 @@
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/
+
+@import url('//fast.fonts.net/t/1.css?apiType=css&projectid=25cb7934-1e59-4dff-8867-d7b5b23b2dc3');
+
+@font-face {
+	font-family: 'New Baskerville ITC W01 Italic';
+	src: url('@/fonts/fe9cce56-07c6-40a7-b02c-767d86a3a3cf.woff2') format('woff2'),
+		url('@/fonts/3e21a16b-7984-4514-bebe-efec88cd58c2.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Didot LT W01 Italic';
+	src: url('@/fonts/443d65aa-6f72-4676-9ff8-47280867f2f6.woff2') format('woff2'),
+		url('@/fonts/2f0a4cb5-52da-49ad-9454-2148732dcc2c.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/**
+ * @license
+ *
+ * Font Family: Zahrah
+ * Designed by: Yoann Minet
+ * URL: https://www.indiantypefoundry.com/fonts/zahrah
+ *
+ * Font Styles:
+ *  Zahrah Regular
+ *
+ * © 2023 Indian Type Foundry
+*/
+
+@font-face {
+	font-family: 'Zahrah Regular';
+	src: url('@/fonts/Zahrah-Regular.woff') format('woff'), url('@/fonts/Zahrah-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Arquitecta Regular by Latinotype
+ * URL: https://www.myfonts.com/products/regular-arquitecta-608024
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ *
+ * Webfont: Arquitecta Light by Latinotype
+ * URL: https://www.myfonts.com/products/light-arquitecta-608022
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2023 MyFonts Inc. */
+
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('@/fonts/ArquitectaRegular/font.woff2') format('woff2'),
+		url('@/fonts/ArquitectaRegular/font.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('@/fonts/ArquitectaLight/font.woff2') format('woff2'),
+		url('@/fonts/ArquitectaLight/font.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/*
+*
+*	Font mixins. 
+*
+*/
+
+$font-body: 'Arquitecta', Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+$font-zah: 'Zahrah Regular', 'Baskerville', Georgia, 'Times New Roman', Times, serif;
+$font-didot: 'Didot LT W01 Italic', 'Didot', 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+$font-bask: 'New Baskerville ITC W01 Italic', 'Baskerville', Georgia, 'Times New Roman', Times, serif;
+
+@mixin font-body() {
+	font-family: $font-body;
+}
+@mixin font-body-light() {
+	font-family: $font-body;
+	font-weight: 300;
+}
+
+@mixin font-zah() {
+	font-family: $font-zah;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.05em; // it's only really used for titles and stuff with a little extra letter spacing
+}
+@mixin font-didot() {
+	font-family: $font-didot;
+	font-weight: normal;
+	font-style: italic;
+	text-rendering: geometricPrecision;
+}
+@mixin font-bask() {
+	font-family: $font-bask;
+	font-weight: normal;
+	font-style: italic;
+	text-rendering: geometricPrecision;
+}

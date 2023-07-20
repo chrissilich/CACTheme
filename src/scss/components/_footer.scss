@@ -1,0 +1,49 @@
+html,
+body,
+#wrapper {
+	min-height: 100vh;
+}
+#wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-pusher {
+	flex-grow: 1;
+}
+
+footer {
+	margin: 1rem 0;
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0.5rem;
+		a {
+			margin: 0 8px;
+			img {
+				max-width: 27px;
+				max-height: 27px;
+				transition: 0.4s;
+				filter: brightness(0);
+				opacity: 0.6;
+			}
+			&:hover img {
+				opacity: 1;
+				filter: $cac-tint-black-to-red;
+			}
+		}
+	}
+	p {
+		font-size: 0.55rem;
+		margin: 0.5em 0;
+		&.lineweaver-credit {
+			display: none;
+			a {
+				color: $cac-gray-dark;
+				&:hover {
+					color: $cac-red;
+				}
+			}
+		}
+	}
+}

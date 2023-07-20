@@ -1,0 +1,30 @@
+$grid-breakpoints: (
+	xs: 0,
+	sm: 480px,
+	md: 768px,
+	lg: 1000px,
+	xl: 1200px,
+	xxl: 1440px,
+);
+
+$container-max-widths: (
+	sm: 97%,
+	md: 92%,
+	lg: 85%,
+	xl: 80%,
+	xxl: 80%,
+);
+
+/*
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }
+@include media-breakpoint-up(xxl) {  }
+
+@include media-breakpoint-down(sm) {  }
+@include media-breakpoint-down(md) {  }
+@include media-breakpoint-down(lg) {  }
+@include media-breakpoint-down(xl) {  }
+@include media-breakpoint-down(xxl) {  }
+*/

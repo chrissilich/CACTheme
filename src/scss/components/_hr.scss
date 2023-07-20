@@ -1,0 +1,16 @@
+main {
+	hr {
+		border: 0;
+		height: 1px;
+		background: $cac-red;
+		margin: ($spacer * 2) 0;
+		opacity: 1;
+
+		&.hr--small {
+			height: 1px;
+			margin: ($spacer * 1) auto;
+			width: 75px;
+			background: $cac-gray-dark;
+		}
+	}
+}

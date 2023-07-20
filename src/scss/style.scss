@@ -1,0 +1,44 @@
+@import "setup/theme-intro";
+
+// site wide styles
+@import "variables/spacing";
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/animations";
+
+// // bootstrap
+@import "setup/bootstrap";
+
+// // came with the starter theme
+@import "setup/wordpress-basics";
+@import "setup/starter-theme";
+
+// mixins and stuff
+@import "variables/helpers";
+
+// the big stuff
+@import "components/container";
+@import "components/lined-title";
+@import "components/typography";
+@import "components/clickable";
+@import "components/logo";
+@import "components/header";
+@import "components/nav";
+@import "components/footer";
+@import "components/slideshow";
+@import "components/hr";
+@import "components/button";
+@import "components/close-button";
+@import "components/edit-link";
+@import "components/instagram-feed";
+@import "components/responsive-debugger";
+
+// pages
+@import "pages/home";
+@import "pages/books";
+@import "pages/about";
+@import "pages/collections";
+@import "pages/interiors";
+@import "pages/features";
+@import "pages/social";
+@import "pages/contact";

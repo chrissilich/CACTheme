@@ -1,0 +1,55 @@
+@use "sass:math";
+
+.logo {
+	position: relative;
+	aspect-ratio: 288 / 96; // this is the ratio of the logo template, which has room for the collection logos under it
+	overflow: hidden;
+	width: 95%;
+	max-width: 300px;
+	margin: 0 auto;
+	@include media-breakpoint-up(md) {
+		width: 95%;
+		max-width: none;
+	}
+
+	&--default,
+	&--nav {
+		aspect-ratio: 288 / 65;
+		margin-top: 1rem;
+	}
+
+	&--home {
+		margin-top: 0.5rem;
+		img.logo-main {
+			width: 100%;
+			transform: translateY(12%);
+			@include media-breakpoint-up(md) {
+				transform: translateY(7%);
+			}
+		}
+	}
+
+	&--collection {
+		img.logo-divider,
+		img.collection-logo {
+			display: block !important;
+			transform: none !important;
+		}
+	}
+	// Note: On the homepage, these divider and collection-logo elements are
+	// shown and hidden by GSAP code in logo.js
+	// In the header on other pages, they're just hidden or not even there.
+	// On the collections page, they're shown
+
+	img.logo-divider,
+	img.collection-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: none;
+	}
+	img.logo-divider {
+		transform: scaleX(0);
+	}
+}

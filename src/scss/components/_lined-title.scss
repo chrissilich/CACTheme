@@ -1,0 +1,23 @@
+@mixin lined-title($color) {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	@include media-breakpoint-up(md) {
+		&::before,
+		&::after {
+			content: '';
+			flex: 1;
+			border-bottom: 1px solid $color;
+			margin: auto;
+			position: relative;
+			top: 2px;
+		}
+
+		&::before {
+			margin-right: 1em;
+		}
+		&::after {
+			margin-left: 1em;
+		}
+	}
+}

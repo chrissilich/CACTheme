@@ -1,0 +1,3 @@
+-   header fluid, no side padding, 1/3 columns, with 8px? gutters
+-   nav fluid, no side padding 1/3 columns, with 8px? gutters
+-   other pages hybrid (not fluid, but all BPs max-widths are set to 100% except XXL) with 50px side padding, 20px gutters: container px-5

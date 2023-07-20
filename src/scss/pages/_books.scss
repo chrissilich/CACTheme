@@ -1,0 +1,78 @@
+@use 'sass:math';
+
+body.post-type-archive-cac_book {
+	.book {
+		@include media-breakpoint-down(sm) {
+			border-bottom: 1px solid $cac-red;
+			padding-bottom: 3rem;
+		}
+
+		&-title {
+			@include lined-title($cac-gray-dark);
+		}
+
+		// for featured books
+		&-content {
+			// make first letter bigger
+			p:first-child::first-letter {
+				font-size: rem-calc(72);
+				color: $cac-red;
+				line-height: 1em;
+				margin-right: -0.08em;
+				margin-left: -0.15em;
+				@include font-zah();
+			}
+		}
+
+		// for non-featured books
+		&-quote {
+			// the quote text itself
+
+			&-quote {
+				@include font-bask();
+				font-size: rem-calc(21);
+				line-height: 1.6em;
+				text-align: center;
+				padding: 0 0.5rem;
+				@include media-breakpoint-up(md) {
+					padding: 0 2rem;
+				}
+
+				.decorative-quote {
+					position: relative;
+					display: inline-block;
+					@include font-zah();
+					line-height: 1em;
+					height: 1em;
+					// width: 0;
+					color: $cac-red;
+					span {
+						position: absolute;
+						font-size: rem-calc(96);
+					}
+					&--open span {
+						right: 0em;
+					}
+					&--close span {
+						left: 0;
+						top: 0.1em;
+					}
+				}
+			}
+			&-person-name {
+				@include font-zah();
+				font-size: rem-calc(22);
+				text-align: center;
+				color: $cac-red;
+			}
+			&-person-title {
+				@include font-body();
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				font-size: rem-calc(13);
+				text-align: center;
+				color: $cac-gray-light;
+			}
+		}
+	}
+}

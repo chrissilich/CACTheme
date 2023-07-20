@@ -1,0 +1,13 @@
+.responsive-debugger {
+	display: none;
+	.logged-in.admin-bar & {
+		display: block;
+	}
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+	padding: 0.75rem 1.5rem;
+	// background: rgba(200, 200, 200, 0.75);
+	color: rgba(150, 150, 150, 0.75);
+}

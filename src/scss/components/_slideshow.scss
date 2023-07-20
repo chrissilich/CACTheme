@@ -1,0 +1,43 @@
+.cac-slideshow {
+	position: relative;
+	padding: 0;
+
+	/* 
+	* Transition logic notes:
+	* There is always exactly one slide marked active, visible with relative positioning so it sets the size
+	*  of the slideshow container, and it's the rear-most slide so fades above it look like crossfades
+	*
+	* When its time to transition, we instantly set a new slide to queued, which puts it above the active one at 0 opacity
+	* Then after a zero ms timeout (so the css can be applied) we set it to entering so it fades in
+	*
+	* After the transition time, we instantly take active off the old slide and put it on the new slide.
+	*/
+
+	img {
+		display: none;
+		transition: 1.5s;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		&.active {
+			display: block;
+			position: relative;
+			z-index: 1;
+			opacity: 1;
+		}
+
+		&.queued,
+		&.entering {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 2;
+		}
+		&.entering {
+			opacity: 1;
+		}
+	}
+}

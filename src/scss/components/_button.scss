@@ -1,0 +1,37 @@
+main {
+	a.btn,
+	button,
+	input[type='submit'] {
+		display: inline-block;
+		width: auto;
+		border: 2px solid $cac-red;
+		background-color: white;
+		@include font-body();
+		font-size: rem-calc(15);
+		padding: rem-calc(6) rem-calc(13) rem-calc(4) rem-calc(12);
+		@include media-breakpoint-up(md) {
+			font-size: rem-calc(17);
+			padding: rem-calc(8) rem-calc(15) rem-calc(6) rem-calc(13);
+		}
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		transition: 0.3s;
+		&:hover {
+			color: white;
+			border: 2px solid $cac-red;
+			background-color: $cac-red;
+		}
+	}
+	a.btn--red,
+	button.red,
+	input[type='submit'].red {
+		color: white;
+		border: 2px solid $cac-red;
+		background-color: $cac-red;
+		&:hover {
+			color: $cac-red;
+			border: 2px solid $cac-red;
+			background-color: white;
+		}
+	}
+}
